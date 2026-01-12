@@ -146,7 +146,10 @@ export class App implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.checkVisibility();
+    // Verifica visibilidade após um pequeno delay para garantir que os elementos estejam renderizados
+    setTimeout(() => {
+      this.checkVisibility();
+    }, 150);
   }
 
   ngOnDestroy() {
